@@ -1,0 +1,34 @@
+Auth 
+
+Register 
+Login
+Logout 
+Verify Account
+Forgot Password
+Reset Password
+
+User
+
+Profile  get
+Edit // Change password patch
+Delete del
+Admin can get all user and vendor
+Can pay for the product
+Can check your previous order
+
+Order
+
+Can track order
+Can create order
+user can cancel order in 5 to 9 minutes but after that can't cancel it
+Calculate all price of the product
+
+Vendor
+
+Can upload food and price
+Can get all orders of the customer
+
+Admin
+
+Check all activity of the user and vendor
+Can be a role of customer care to the user
