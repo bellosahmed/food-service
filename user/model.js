@@ -39,10 +39,10 @@ const userSchema = new mongoose.Schema({
     gender: {
         type: String
     },
-    // isVerified: {
-    //     type: Boolean,
-    //     default: false // when user is registered will show false untill he verifies his account
-    // }
+    isVerified: {
+        type: Boolean,
+        default: false // when user is registered will show false untill he verifies his account
+    }
 }, { timestamps: true }); // to create a model of user
 
 

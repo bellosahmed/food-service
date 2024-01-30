@@ -21,7 +21,7 @@ Order
 Can track order
 Can create order
 user can cancel order in 5 to 9 minutes but after that can't cancel it
-Calculate all price of the product
+Calculate all price of the order
 
 Vendor
 

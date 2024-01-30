@@ -7,7 +7,10 @@ dotenv.config();
 
 const db = require('./config/db');
 const auth = require('./auth/router');
+const admin = require('./admin/router');
+const cart = require('./cart/router');
 const user = require('./user/router');
+const vendor = require('./vendor/router');
 
 // Middlewares
 app.use(express.static('files'));
@@ -18,7 +21,10 @@ db();
 
 // Routes
 app.use('/api/auth', auth);
+// app.use('/api/admin', admin);
 app.use('/api/user', user);
+// app.use('/api/cart', cart);
+// app.use('/api/vendor', vendor);
 
 const port = process.env.PORT || 5000; // will only run 5000
 
