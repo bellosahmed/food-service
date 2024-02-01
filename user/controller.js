@@ -1,5 +1,7 @@
 const User = require('./model');
 
+const bcrypt = require('bcryptjs');
+
 // User can get their profile by id
 const profile = async (req, res) => {
     const userId = req.params.id;
@@ -28,7 +30,13 @@ const edituser = async (req, res) => {
         user.address = address || user.address;
         user.state = state || user.state;
         user.phonenum = phonenum || user.phonenum;
-        user.password = password || user.password;
+
+        // if password is changed it will changed and hashed
+        if (password) {
+            const salt = await bcrypt.genSalt(10);
+            const hashedpassword = await bcrypt.hash(password, salt);
+            user.password = hashedpassword;
+        }
 
         user = await user.save();
         res.status(200).json({ status: true, user, message: 'Profile Update' })
