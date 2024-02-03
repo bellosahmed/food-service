@@ -24,7 +24,7 @@ app.use('/api/auth', auth);
 // app.use('/api/admin', admin);
 app.use('/api/user', user);
 // app.use('/api/cart', cart);
-// app.use('/api/vendor', vendor);
+app.use('/api/vendor', vendor);
 
 const port = process.env.PORT || 5000; // will only run 5000
 

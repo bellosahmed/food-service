@@ -9,14 +9,17 @@ const vendorSchema = new mongoose.Schema({
         type: String,
         // required: true,
     },
-    name: {
+    productname: {
         type: String,
         required: true
     },
-    description: {
+    shopname: {
+        type: String,
+        required: true
+    },
+    desc: {
         type: String,
     },
-
 }, { timestamps: true })
 
 module.exports = mongoose.model('Vendor', vendorSchema);
